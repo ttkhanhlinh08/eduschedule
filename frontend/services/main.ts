@@ -1,4 +1,5 @@
-const API_URL = "http://127.0.0.1:8000"; // local dev
+// const API_URL = "http://127.0.0.1:8000"; // local dev
+const API_URL = "https://eduschedule-no9q.onrender.com";
 
 import {
   BellSchedule,
