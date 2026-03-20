@@ -1,0 +1,40 @@
+{
+    "input_summary": {
+        "num_teachers": 15,
+        "num_classes": 5,
+        "num_subjects": 19,
+        "days_per_week": 5,
+        "periods_per_day": 7,
+        "cost_weight": 1,
+        "min_load_penalty_weight": 200000,
+        "homeroom_penalty_weight": 100000
+    },
+    "problem_size": {
+        "num_variables": 7910,
+        "num_class_subject_pairs": 80,
+        "num_teacher_subject_pairs": 51
+    },
+    "constraint_profile": {
+        "constraint_density": 226.0,
+        "fixed_slots_count": 1,
+        "fixed_slot_ratio": 0.00012642225031605562,
+        "subjects_with_no_consecutive_days": 1,
+        "subjects_with_max_per_day_limit": 19,
+        "homeroom_required_subjects": 1,
+        "avg_min_load": 11.6,
+        "total_min_load": 174,
+        "max_extra_periods": 5
+    },
+    "performance": {
+        "time_to_first_feasible": 1.76767897605896,
+        "time_to_best": 3.690091133117676,
+        "total_runtime": 3.8144404888153076
+    },
+    "first_solution": {
+        "total_cost": 21132500.0
+    },
+    "best_solution": {
+        "total_cost": 14445000.0
+    },
+    "solver_status": "CpSolverStatus.OPTIMAL"
+}

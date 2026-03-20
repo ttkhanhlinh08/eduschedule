@@ -1,0 +1,941 @@
+{
+    "metadata": {
+        "last_modified": "2026-03-20T10:10:25.994237+00:00"
+    },
+    "data": {
+        "bell": {
+            "daysPerWeek": 5,
+            "morningPeriods": 4,
+            "morningBreakAfter": 2,
+            "afternoonPeriods": 3,
+            "afternoonBreakAfter": 2,
+            "hasFlagSalute": true
+        },
+        "params": {
+            "extraPayMultiplier": 1.5,
+            "maxExtraPeriods": 5
+        },
+        "subjects": [
+            {
+                "id": "tv",
+                "name": "Tiếng Việt",
+                "type": "Main",
+                "maxPeriodsPerDay": 3,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "toan",
+                "name": "Toán",
+                "type": "Main",
+                "maxPeriodsPerDay": 2,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "tnxh",
+                "name": "TNXH",
+                "type": "Extra",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "shl",
+                "name": "SHL",
+                "type": "Main",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [
+                    {
+                        "day": 5
+                    }
+                ],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": true
+            },
+            {
+                "id": "tienganh",
+                "name": "Tiếng Anh",
+                "type": "Extra",
+                "maxPeriodsPerDay": 2,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "gdtc",
+                "name": "GDTC",
+                "type": "Extra",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": true,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "tinhoc",
+                "name": "Tin học",
+                "type": "Extra",
+                "maxPeriodsPerDay": 2,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "hdtn",
+                "name": "HĐTN",
+                "type": "Extra",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "mythuat",
+                "name": "Mỹ Thuật",
+                "type": "Extra",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "daoduc",
+                "name": "Đạo đức",
+                "type": "Extra",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "amnhac",
+                "name": "Âm nhạc",
+                "type": "Extra",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "congnghe",
+                "name": "Công nghệ",
+                "type": "Extra",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "khoahoc",
+                "name": "Khoa học",
+                "type": "Extra",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "lsdl",
+                "name": "LS&ĐL",
+                "type": "Extra",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 0,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "gdcds",
+                "name": "GDCDS",
+                "type": "Optional",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 55000,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "iclc",
+                "name": "ICLC",
+                "type": "Optional",
+                "maxPeriodsPerDay": 2,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 55000,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "kns",
+                "name": "KNS",
+                "type": "Optional",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 55000,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "stem",
+                "name": "STEM",
+                "type": "Optional",
+                "maxPeriodsPerDay": 1,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 55000,
+                "mustBeHomeroom": false
+            },
+            {
+                "id": "tatc",
+                "name": "TATC",
+                "type": "Optional",
+                "maxPeriodsPerDay": 2,
+                "noConsecutiveDays": false,
+                "fixedSlots": [],
+                "optionalPayRate": 55000,
+                "mustBeHomeroom": false
+            }
+        ],
+        "grades": [
+            {
+                "id": "g1",
+                "name": "Khối 1",
+                "requiredPeriodsPerWeek": 33,
+                "subjects": [
+                    {
+                        "subjectId": "tv",
+                        "periods": 12
+                    },
+                    {
+                        "subjectId": "toan",
+                        "periods": 3
+                    },
+                    {
+                        "subjectId": "tnxh",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "shl",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "gdtc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "tinhoc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "hdtn",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "mythuat",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "daoduc",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "amnhac",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "gdcds",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "iclc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "kns",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "stem",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "tatc",
+                        "periods": 2
+                    }
+                ]
+            },
+            {
+                "id": "g2",
+                "name": "Khối 2",
+                "requiredPeriodsPerWeek": 33,
+                "subjects": [
+                    {
+                        "subjectId": "tv",
+                        "periods": 10
+                    },
+                    {
+                        "subjectId": "toan",
+                        "periods": 5
+                    },
+                    {
+                        "subjectId": "tnxh",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "shl",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "gdtc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "tinhoc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "hdtn",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "mythuat",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "daoduc",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "amnhac",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "gdcds",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "iclc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "kns",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "stem",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "tatc",
+                        "periods": 2
+                    }
+                ]
+            },
+            {
+                "id": "g3",
+                "name": "Khối 3",
+                "requiredPeriodsPerWeek": 34,
+                "subjects": [
+                    {
+                        "subjectId": "tv",
+                        "periods": 7
+                    },
+                    {
+                        "subjectId": "toan",
+                        "periods": 5
+                    },
+                    {
+                        "subjectId": "tnxh",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "shl",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "tienganh",
+                        "periods": 4
+                    },
+                    {
+                        "subjectId": "gdtc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "tinhoc",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "hdtn",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "mythuat",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "daoduc",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "amnhac",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "congnghe",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "gdcds",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "iclc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "kns",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "stem",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "tatc",
+                        "periods": 2
+                    }
+                ]
+            },
+            {
+                "id": "g4",
+                "name": "Khối 4",
+                "requiredPeriodsPerWeek": 34,
+                "subjects": [
+                    {
+                        "subjectId": "tv",
+                        "periods": 7
+                    },
+                    {
+                        "subjectId": "toan",
+                        "periods": 5
+                    },
+                    {
+                        "subjectId": "shl",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "tienganh",
+                        "periods": 4
+                    },
+                    {
+                        "subjectId": "gdtc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "tinhoc",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "hdtn",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "mythuat",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "daoduc",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "amnhac",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "congnghe",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "khoahoc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "lsdl",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "gdcds",
+                        "periods": 0
+                    },
+                    {
+                        "subjectId": "iclc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "kns",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "tatc",
+                        "periods": 2
+                    }
+                ]
+            },
+            {
+                "id": "g5",
+                "name": "Khối 5",
+                "requiredPeriodsPerWeek": 34,
+                "subjects": [
+                    {
+                        "subjectId": "tv",
+                        "periods": 7
+                    },
+                    {
+                        "subjectId": "toan",
+                        "periods": 5
+                    },
+                    {
+                        "subjectId": "shl",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "tienganh",
+                        "periods": 4
+                    },
+                    {
+                        "subjectId": "gdtc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "tinhoc",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "hdtn",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "mythuat",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "daoduc",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "amnhac",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "congnghe",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "khoahoc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "lsdl",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "iclc",
+                        "periods": 2
+                    },
+                    {
+                        "subjectId": "kns",
+                        "periods": 1
+                    },
+                    {
+                        "subjectId": "tatc",
+                        "periods": 2
+                    }
+                ]
+            }
+        ],
+        "classes": [
+            {
+                "id": "L1_1",
+                "name": "L1/1",
+                "gradeId": "g1"
+            },
+            {
+                "id": "L1_2",
+                "name": "L1/2",
+                "gradeId": "g1"
+            },
+            {
+                "id": "L2_1",
+                "name": "L2/1",
+                "gradeId": "g2"
+            },
+            {
+                "id": "L2_2",
+                "name": "L2/2",
+                "gradeId": "g2"
+            },
+            {
+                "id": "L3_1",
+                "name": "L3/1",
+                "gradeId": "g3"
+            },
+            {
+                "id": "L3_2",
+                "name": "L3/2",
+                "gradeId": "g3"
+            },
+            {
+                "id": "L4_1",
+                "name": "L4/1",
+                "gradeId": "g4"
+            },
+            {
+                "id": "L4_2",
+                "name": "L4/2",
+                "gradeId": "g4"
+            },
+            {
+                "id": "L5_1",
+                "name": "L5/1",
+                "gradeId": "g5"
+            },
+            {
+                "id": "L5_2",
+                "name": "L5/2",
+                "gradeId": "g5"
+            }
+        ],
+        "teachers": [
+            {
+                "id": "t1",
+                "name": "Quyên",
+                "type": "Homeroom",
+                "homeroomClassId": "L1_1",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "daoduc",
+                    "hdtn"
+                ],
+                "minPeriodsPerWeek": 16,
+                "payRate": 30000
+            },
+            {
+                "id": "t2",
+                "name": "Dung",
+                "type": "Homeroom",
+                "homeroomClassId": "L1_2",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "daoduc",
+                    "hdtn"
+                ],
+                "minPeriodsPerWeek": 19,
+                "payRate": 10000
+            },
+            {
+                "id": "t6",
+                "name": "Loan",
+                "type": "Homeroom",
+                "homeroomClassId": "L2_1",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "daoduc",
+                    "hdtn"
+                ],
+                "minPeriodsPerWeek": 16,
+                "payRate": 30000
+            },
+            {
+                "id": "t7",
+                "name": "Huệ",
+                "type": "Homeroom",
+                "homeroomClassId": "L2_2",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "daoduc",
+                    "hdtn"
+                ],
+                "minPeriodsPerWeek": 19,
+                "payRate": 10000
+            },
+            {
+                "id": "t11",
+                "name": "Dương",
+                "type": "Homeroom",
+                "homeroomClassId": "L3_1",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "hdtn",
+                    "daoduc"
+                ],
+                "minPeriodsPerWeek": 16,
+                "payRate": 30000
+            },
+            {
+                "id": "t12",
+                "name": "Hồng",
+                "type": "Homeroom",
+                "homeroomClassId": "L3_2",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "hdtn",
+                    "daoduc"
+                ],
+                "minPeriodsPerWeek": 19,
+                "payRate": 10000
+            },
+            {
+                "id": "t15",
+                "name": "Thúy",
+                "type": "Homeroom",
+                "homeroomClassId": "L4_1",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "lsdl",
+                    "khoahoc",
+                    "hdtn",
+                    "daoduc"
+                ],
+                "minPeriodsPerWeek": 16,
+                "payRate": 30000
+            },
+            {
+                "id": "t16",
+                "name": "Hạnh",
+                "type": "Homeroom",
+                "homeroomClassId": "L4_2",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "lsdl",
+                    "khoahoc",
+                    "hdtn",
+                    "daoduc"
+                ],
+                "minPeriodsPerWeek": 19,
+                "payRate": 10000
+            },
+            {
+                "id": "t19",
+                "name": "Quyền",
+                "type": "Homeroom",
+                "homeroomClassId": "L5_1",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "lsdl",
+                    "khoahoc",
+                    "hdtn",
+                    "daoduc"
+                ],
+                "minPeriodsPerWeek": 16,
+                "payRate": 30000
+            },
+            {
+                "id": "t20",
+                "name": "Hòa",
+                "type": "Homeroom",
+                "homeroomClassId": "L5_2",
+                "subjectIds": [
+                    "tv",
+                    "toan",
+                    "tnxh",
+                    "shl",
+                    "lsdl",
+                    "khoahoc",
+                    "hdtn",
+                    "daoduc"
+                ],
+                "minPeriodsPerWeek": 19,
+                "payRate": 10000
+            },
+            {
+                "id": "t23",
+                "name": "Hương",
+                "type": "Non-Homeroom",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "tienganh",
+                    "tatc",
+                    "hdtn"
+                ],
+                "minPeriodsPerWeek": 19,
+                "payRate": 30000
+            },
+            {
+                "id": "t24",
+                "name": "Triều",
+                "type": "Non-Homeroom",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "tienganh",
+                    "tatc",
+                    "hdtn"
+                ],
+                "minPeriodsPerWeek": 21,
+                "payRate": 25000
+            },
+            {
+                "id": "t28",
+                "name": "Phượng",
+                "type": "Non-Homeroom",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "hdtn",
+                    "tinhoc",
+                    "congnghe"
+                ],
+                "minPeriodsPerWeek": 23,
+                "payRate": 10000
+            },
+            {
+                "id": "t29",
+                "name": "Ngà",
+                "type": "Non-Homeroom",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "gdtc"
+                ],
+                "minPeriodsPerWeek": 23,
+                "payRate": 10000
+            },
+            {
+                "id": "t31",
+                "name": "Huyền",
+                "type": "Non-Homeroom",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "amnhac",
+                    "mythuat"
+                ],
+                "minPeriodsPerWeek": 23,
+                "payRate": 10000
+            },
+            {
+                "id": "t34",
+                "name": "B.Thuận",
+                "type": "Non-Homeroom",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "amnhac",
+                    "hdtn"
+                ],
+                "minPeriodsPerWeek": 2,
+                "payRate": 50000
+            },
+            {
+                "id": "t35",
+                "name": "T.Hằng",
+                "type": "Non-Homeroom",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "hdtn",
+                    "tv"
+                ],
+                "minPeriodsPerWeek": 4,
+                "payRate": 45000
+            },
+            {
+                "id": "t36",
+                "name": "GD.CDS",
+                "type": "Outsourced",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "gdcds"
+                ],
+                "minPeriodsPerWeek": 0,
+                "payRate": 55000
+            },
+            {
+                "id": "t37",
+                "name": "STEM-1",
+                "type": "Outsourced",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "stem"
+                ],
+                "minPeriodsPerWeek": 0,
+                "payRate": 55000
+            },
+            {
+                "id": "t39",
+                "name": "KNS-1",
+                "type": "Outsourced",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "kns"
+                ],
+                "minPeriodsPerWeek": 0,
+                "payRate": 55000
+            },
+            {
+                "id": "t41",
+                "name": "ICLC-1",
+                "type": "Outsourced",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "iclc"
+                ],
+                "minPeriodsPerWeek": 0,
+                "payRate": 55000
+            },
+            {
+                "id": "t42",
+                "name": "ICLC-2",
+                "type": "Outsourced",
+                "homeroomClassId": null,
+                "subjectIds": [
+                    "iclc"
+                ],
+                "minPeriodsPerWeek": 0,
+                "payRate": 54999
+            }
+        ],
+        "language": "en",
+        "modelConfig": {
+            "costWeight": 1,
+            "homeroomPenaltyWeight": 100000,
+            "minLoadPenaltyWeight": 200000
+        }
+    }
+}
