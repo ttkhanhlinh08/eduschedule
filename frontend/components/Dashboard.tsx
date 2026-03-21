@@ -153,10 +153,10 @@ const Dashboard: React.FC = () => {
 
         // update feasible progress
         if (data.feasible) {
-          setProgress({
+          setProgress(prev => ({
             feasible: true,
-            bestScore: data.best_score
-          });
+            bestScore: data.best_score ?? prev.bestScore
+          }));
         }
 
         // finished
@@ -294,7 +294,12 @@ const Dashboard: React.FC = () => {
               </div>
               <button
                 onClick={stopSolver}
-                className="mt-6 px-4 py-2 bg-red-500 text-white rounded-lg text-sm font-semibold hover:bg-red-600"
+                disabled={!progress.feasible}
+                className={`mt-6 px-4 py-2 rounded-lg text-sm font-semibold transition
+                  ${progress.feasible 
+                    ? 'bg-red-500 text-white hover:bg-red-600' 
+                    : 'bg-slate-200 text-slate-400 cursor-not-allowed'}
+                `}
               >
                 Stop & View Current Solution
               </button>
