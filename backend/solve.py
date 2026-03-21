@@ -468,7 +468,7 @@ def solve_timetable(req: SolveRequest, progress_callback=None, stop_callback=Non
     # ============================================================
 
     solver = cp_model.CpSolver()
-    """solver.parameters.max_time_in_seconds = 300"""
+    solver.parameters.max_time_in_seconds = 100
     """solver.parameters.num_search_workers = 5"""  
     solver.parameters.log_search_progress = False
     solver.parameters.cp_model_presolve = True
