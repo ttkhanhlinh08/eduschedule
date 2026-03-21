@@ -356,9 +356,9 @@ def solve_timetable(req: SolveRequest, progress_callback=None, stop_callback=Non
         else:
             model.Add(sum(vars_req) == required)
 
-    # ============================================================
-    # SOFT CONSTRAINTS TRACKING STRUCTURES
-    # ============================================================
+    # ------------------------------------------------------------
+    # 8. Teacher upper load limit (compulsory subjects only)
+    # ------------------------------------------------------------
 
     cost_terms = []
     min_load_violation_meta = []
@@ -370,31 +370,27 @@ def solve_timetable(req: SolveRequest, progress_callback=None, stop_callback=Non
 
         compulsory_vars = teacher_compulsory_index[t.id]
 
-        compulsory_load = None
+        compulsory_load = model.NewIntVar(0, days * periods, f"comp_load_{t.id}")
 
-        if USE_COST or USE_MIN_LOAD:
-            compulsory_load = model.NewIntVar(0, days * periods, f"comp_load_{t.id}")
+        if compulsory_vars:
+            model.Add(compulsory_load == sum(compulsory_vars))
+        else:
+            model.Add(compulsory_load == 0)
 
-            if compulsory_vars:
-                model.Add(compulsory_load == sum(compulsory_vars))
-            else:
-                model.Add(compulsory_load == 0)
-
-            model.Add(compulsory_load <= t.minPeriodsPerWeek + req.params.maxExtraPeriods)
+        model.Add(compulsory_load <= t.minPeriodsPerWeek + req.params.maxExtraPeriods)
 
         # =====================================================
-        # UNDERLOAD
+        # UNDERLOAD (Soft constraint)
         # =====================================================
         if USE_MIN_LOAD:
             shortage = model.NewIntVar(0, days * periods, f"shortage_{t.id}")
 
             model.Add(shortage >= t.minPeriodsPerWeek - compulsory_load)
-            model.Add(shortage >= 0)
 
             min_load_violation_meta.append((t.id, shortage))
 
         # =====================================================
-        # SALARY CALCULATION
+        # SALARY CALCULATION (Soft constraint)
         # =====================================================
 
         if USE_COST:
@@ -405,7 +401,6 @@ def solve_timetable(req: SolveRequest, progress_callback=None, stop_callback=Non
             overtime = model.NewIntVar(0, days * periods, f"ot_{t.id}")
 
             model.Add(overtime >= compulsory_load - t.minPeriodsPerWeek)
-            model.Add(overtime >= 0)
 
             extra_cost = int(t.payRate * req.params.extraPayMultiplier) * overtime
 
@@ -417,7 +412,7 @@ def solve_timetable(req: SolveRequest, progress_callback=None, stop_callback=Non
             cost_terms.append(base_cost + extra_cost + optional_cost)
 
         # ============================================================
-        # HOMEROOM VIOLATIONS
+        # HOMEROOM VIOLATIONS (Soft constraint)
         # ============================================================
 
     if USE_HOMEROOM_PENALTY:
@@ -444,13 +439,6 @@ def solve_timetable(req: SolveRequest, progress_callback=None, stop_callback=Non
                     homeroom_violation_meta.append((tId, cId, sId, d, p))
 
         total_homeroom_penalty = sum(homeroom_violation_terms)
-
-        """if homeroom_violation_terms:
-            model.Add(total_homeroom_penalty ==
-                    sum(homeroom_violation_terms))
-        else:
-            model.Add(total_homeroom_penalty == 0)"""
-
 
     # ============================================================
     # OBJECTIVE
